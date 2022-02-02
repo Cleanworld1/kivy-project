@@ -1,0 +1,40 @@
+BoxLayoutExample:
+
+<BoxLayoutExample@BoxLayout>:
+    orientation: "vertical"
+    Label:
+        id: accumulated_money
+        text: "57619"
+        font_size: "50sp"
+        color: 1, 0, 0, 1
+        size_hint: 1, 1
+        height: "100dp"
+    Label:
+        text: "Expedite List"
+        font_size: "20sp"
+        size_hint: 1, None
+        height: "50dp"
+    ScrollViewContainer:
+        size_hint: 1, 0.2
+        id: svc
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint: 1, None
+        height: "50dp"
+        TextInput:
+            id: input_money
+            size_hint: 1, 1
+        RegisterBtn:
+
+<RegisterBtn>:
+    id: btn_money
+    text: "Register"
+    size_hint: None, 1
+    width: "80dp"
+    on_press: self.on_button_click()
+
+<ScrollViewContainer@ScrollView>:
+    History:
+        id: history
+        size_hint: 1, None
+        height: self.minimum_height
